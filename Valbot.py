@@ -27,7 +27,8 @@ init()  # not a clue what init function its loading but its needed lol
 # ---------------------------------------------------------------
 
 def main():
-
+    import bot
+    bot = bot.bot()
     config = ConfigParser(allow_no_value=True)
     config.read('config.ini')
 
@@ -58,10 +59,10 @@ def main():
     
     
 
-    version = "Valbot v2.2.2"
+    version = "Valbot v2.2.3"
     versionstripped = version.replace("Valbot ", "")
     print(Style.RESET_ALL) 
-    os.system('mode con: cols=39 lines=31')
+    os.system('mode con: cols=39 lines=33')
     title = "title " + version
     os.system(title)
     print(Fore.YELLOW + """
@@ -73,7 +74,7 @@ def main():
       ╚╝  ╚╝ ╚╝╚═══╝╚═══╝╚═══╝  ╚╝
                            """ + Style.NORMAL + Fore.RED, Style.RESET_ALL)
 
-    print(Style.RESET_ALL + Fore.YELLOW + Style.BRIGHT + "     " + version + "         Fums#0888")
+    print(Style.RESET_ALL + Fore.YELLOW + Style.BRIGHT + "      " + version + "\n      Written by: Fums#0888\n      Maintained by: The-Drobe")
     print(Style.RESET_ALL) 
     print(Style.RESET_ALL)
     print(Style.RESET_ALL + Fore.YELLOW + "———————————————————————————————————————")
@@ -173,7 +174,8 @@ def main():
                         pass
                 print(Style.RESET_ALL)
                 time.sleep(7)
-                os.startfile("bot.py")
+                #os.startfile("bot.py")
+                bot.firststart()
                 time.sleep(.5)
                 quit()
             else:
@@ -200,9 +202,10 @@ def main():
             print(Fore.WHITE + " 3)", Fore.CYAN + "Valorant must be fullscreen ")
             print("    and focused")
             print("")
-            print(Fore.BLUE + " Discord :", Fore.YELLOW + "Fums#0888")
+            #print(Fore.BLUE + " Discord :", Fore.YELLOW + "Fums#0888")
             print(Fore.BLUE + " Discord :", Fore.YELLOW + "gg.gg/valbotserver")
             print(Fore.CYAN, Fore.BLUE + "Github :", Fore.YELLOW + "https://github.com/MrFums", Style.RESET_ALL)
+            print(Fore.CYAN, Fore.BLUE + "Github :", Fore.YELLOW + "https://github.com/The-Drobe", Style.RESET_ALL)
             print(Style.RESET_ALL)
             print(Style.BRIGHT, Fore.RED)
             print("")

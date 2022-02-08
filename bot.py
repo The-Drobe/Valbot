@@ -1,6 +1,7 @@
 print ("VALBOT IS LOADING...")
 print()
 print("WRITTEN BY FUMS")
+print("MAINTAINED BY The-Drobe")
 print()
 print()
 # https://open.spotify.com/track/152unnv8fuahIUyVnHJutJ?si=oK5FgV8ZQH66chbGCDyl3A
@@ -83,16 +84,17 @@ class bot:
 
         
         if forceonline is True:
-            self.cheaterdetected_png = Image.open(requests.get("https://raw.githubusercontent.com/MrFums/ValbotAssets/main/valbot_assets_1920_1080/cheated_detected.png", stream=True).raw)
-            self.continueterminated_png = Image.open(requests.get("https://raw.githubusercontent.com/MrFums/ValbotAssets/main/valbot_assets_1920_1080/continue_terminated.png", stream=True).raw)
-            self.deathmatch_png = Image.open(requests.get("https://raw.githubusercontent.com/MrFums/ValbotAssets/main/valbot_assets_1920_1080/deathmatch.png", stream=True).raw)
-            self.ingame_png = Image.open(requests.get("https://raw.githubusercontent.com/MrFums/ValbotAssets/main/valbot_assets_1920_1080/ingame.png", stream=True).raw)
-            self.inqueue_png = Image.open(requests.get("https://raw.githubusercontent.com/MrFums/ValbotAssets/main/valbot_assets_1920_1080/inqueue.png", stream=True).raw)
-            self.ondeathmatch_png = Image.open(requests.get("https://raw.githubusercontent.com/MrFums/ValbotAssets/main/valbot_assets_1920_1080/ondeathmatch.png", stream=True).raw)
-            self.play_png = Image.open(requests.get("https://raw.githubusercontent.com/MrFums/ValbotAssets/main/valbot_assets_1920_1080/play.png", stream=True).raw)
-            self.playagain_png = Image.open(requests.get("https://raw.githubusercontent.com/MrFums/ValbotAssets/main/valbot_assets_1920_1080/playagain.png", stream=True).raw)
-            self.start_png = Image.open(requests.get("https://raw.githubusercontent.com/MrFums/ValbotAssets/main/valbot_assets_1920_1080/start.png", stream=True).raw)
-            self.afkwarning = Image.open(requests.get("https://raw.githubusercontent.com/MrFums/ValbotAssets/main/valbot_assets_1920_1080/afkwarning.png", stream=True).raw)
+            self.cheaterdetected_png = Image.open(requests.get("https://raw.githubusercontent.com/The-Drobe/ValbotAssets/main/valbot_assets_1920_1080/cheated_detected.png", stream=True).raw)
+            self.continueterminated_png = Image.open(requests.get("https://raw.githubusercontent.com/The-Drobe/ValbotAssets/main/valbot_assets_1920_1080/continue_terminated.png", stream=True).raw)
+            self.deathmatch_png = Image.open(requests.get("https://raw.githubusercontent.com/The-Drobe/ValbotAssets/main/valbot_assets_1920_1080/deathmatch.png", stream=True).raw)
+            self.ingame_png = Image.open(requests.get("https://raw.githubusercontent.com/The-Drobe/ValbotAssets/main/valbot_assets_1920_1080/ingame.png", stream=True).raw)
+            self.inqueue_png = Image.open(requests.get("https://raw.githubusercontent.com/The-Drobe/ValbotAssets/main/valbot_assets_1920_1080/inqueue.png", stream=True).raw)
+            self.ondeathmatch_png = Image.open(requests.get("https://raw.githubusercontent.com/The-Drobe/ValbotAssets/main/valbot_assets_1920_1080/ondeathmatch.png", stream=True).raw)
+            self.play_png = Image.open(requests.get("https://raw.githubusercontent.com/The-Drobe/ValbotAssets/main/valbot_assets_1920_1080/play.png", stream=True).raw)
+            self.playagain_png = Image.open(requests.get("https://raw.githubusercontent.com/The-Drobe/ValbotAssets/main/valbot_assets_1920_1080/playagain.png", stream=True).raw)
+            self.start_png = Image.open(requests.get("https://raw.githubusercontent.com/The-Drobe/ValbotAssets/main/valbot_assets_1920_1080/start.png", stream=True).raw)
+            self.afkwarning = Image.open(requests.get("https://raw.githubusercontent.com/The-Drobe/ValbotAssets/main/valbot_assets_1920_1080/afkwarning.png", stream=True).raw)
+            self.playlauncher = Image.open(requests.get("https://raw.githubusercontent.com/The-Drobe/ValbotAssets/main/valbot_assets_1920_1080/playlauncher.png", stream=True).raw)
 
         else:
             self.cheaterdetected_png = "assets/cheated_detected.png"
@@ -105,6 +107,7 @@ class bot:
             self.playagain_png = "assets/playagain.png"
             self.start_png = "assets/start.png"
             self.afkwarning = "assets/afkwarning.png"
+            self.playlauncher = "assets/playlauncher.png"
 
         
         try:  # if cant connect to discord (if it isnt open for example), bot doesnt crash
@@ -153,11 +156,11 @@ class bot:
 
                 embed.set_author(
                     name=self.version,
-                    url="https://github.com/MrFums/Valbot",
-                    icon_url="https://raw.githubusercontent.com/MrFums/ValbotAssets/main/valbotlogo_22plusnobg.png",
+                    url="https://github.com/The-Drobe/Valbot",
+                    icon_url="https://raw.githubusercontent.com/The-Drobe/ValbotAssets/main/valbotlogo_22plusnobg.png",
                 )
                 textforfooter = "[" + self.computer_name + "] by Fums"
-                embed.set_footer(text=textforfooter, icon_url="https://raw.githubusercontent.com/MrFums/ValbotAssets/main/fumspfp.png")
+                embed.set_footer(text=textforfooter, icon_url="https://raw.githubusercontent.com/The-Drobe/ValbotAssets/main/fumspfp.png")
                 embed.set_timestamp()
                 webhook.add_embed(embed)
                 webhook.execute()
@@ -166,7 +169,8 @@ class bot:
 
 
         time.sleep(1)
-        os.startfile(__file__)  # starts the restart script which reopens this script
+        #os.startfile(__file__)  # starts the restart script which reopens this script
+        self.firststart()
         time.sleep(.5)
         quit()  # quits this runtime of the script
 
@@ -230,11 +234,11 @@ class bot:
 
                 embed.set_author(
                     name=self.version,
-                    url="https://github.com/MrFums/Valbot",
-                    icon_url="https://raw.githubusercontent.com/MrFums/ValbotAssets/main/valbotlogo_22plusnobg.png",
+                    url="https://github.com/The-Drobe/Valbot",
+                    icon_url="https://raw.githubusercontent.com/The-Drobe/ValbotAssets/main/valbotlogo_22plusnobg.png",
                 )
                 textforfooter = "[" + self.computer_name + "] by Fums"
-                embed.set_footer(text=textforfooter, icon_url="https://raw.githubusercontent.com/MrFums/ValbotAssets/main/fumspfp.png")
+                embed.set_footer(text=textforfooter, icon_url="https://raw.githubusercontent.com/The-Drobe/ValbotAssets/main/fumspfp.png")
                 embed.set_timestamp()
                 webhook.add_embed(embed)
                 webhook.execute()
@@ -267,8 +271,7 @@ class bot:
         time.sleep(15)
         self.restarted += 1
         #clicks the play button when you are in launcher to fix some peoples launchers
-        screenWidth, screenHeight = pyautogui.size()
-        pyautogui.click(screenWidth / 2, screenHeight / 2)
+        pyautogui.click(self.playlauncher)
         time.sleep(15)
         self.valorantrunning()
 
@@ -681,11 +684,11 @@ class bot:
                                              description="A match has been found.\nWaiting for the match to end.")
                         embed.set_author(
                             name=self.version,
-                            url="https://github.com/MrFums/Valbot",
-                            icon_url="https://raw.githubusercontent.com/MrFums/ValbotAssets/main/valbotlogo_22plusnobg.png",
+                            url="https://github.com/The-Drobe/Valbot",
+                            icon_url="https://raw.githubusercontent.com/The-Drobe/ValbotAssets/main/valbotlogo_22plusnobg.png",
                         )
                         textforfooter = "[" + self.computer_name + "] by Fums"
-                        embed.set_footer(text=textforfooter, icon_url="https://raw.githubusercontent.com/MrFums/ValbotAssets/main/fumspfp.png")
+                        embed.set_footer(text=textforfooter, icon_url="https://raw.githubusercontent.com/The-Drobe/ValbotAssets/main/fumspfp.png")
                         embed.set_timestamp()
                         webhook.add_embed(embed)
                         webhook.execute()
@@ -808,13 +811,13 @@ class bot:
 
                 embed.set_author(
                     name=self.version,
-                    url="https://github.com/MrFums/Valbot",
-                    icon_url="https://raw.githubusercontent.com/MrFums/ValbotAssets/main/valbotlogo_22plusnobg.png",
+                    url="https://github.com/The-Drobe/Valbot",
+                    icon_url="https://raw.githubusercontent.com/The-Drobe/ValbotAssets/main/valbotlogo_22plusnobg.png",
                 )
                 textforfooter = "[" + self.computer_name + "] by Fums"
-                embed.set_footer(text=textforfooter, icon_url="https://raw.githubusercontent.com/MrFums/ValbotAssets/main/fumspfp.png")
+                embed.set_footer(text=textforfooter, icon_url="https://raw.githubusercontent.com/The-Drobe/ValbotAssets/main/fumspfp.png")
                 embed.set_timestamp()
-                embed.set_thumbnail(url='https://raw.githubusercontent.com/MrFums/ValbotAssets/main/valbotlogo_22plus_curved.png')
+                embed.set_thumbnail(url='https://raw.githubusercontent.com/The-Drobe/ValbotAssets/main/valbotlogo_22plus_curved.png')
                 webhook.add_embed(embed)
                 webhook.execute()
             except Exception:
@@ -845,13 +848,13 @@ class bot:
                                      description="The XP limit has been reached.\nBot has been stopped.")
                 embed.set_author(
                     name=self.version,
-                    url="https://github.com/MrFums/Valbot",
-                    icon_url="https://raw.githubusercontent.com/MrFums/ValbotAssets/main/valbotlogo_22plusnobg.png",
+                    url="https://github.com/The-Drobe/Valbot",
+                    icon_url="https://raw.githubusercontent.com/The-Drobe/ValbotAssets/main/valbotlogo_22plusnobg.png",
                 )
                 textforfooter = "[" + self.computer_name + "] by Fums"
-                embed.set_footer(text=textforfooter, icon_url="https://raw.githubusercontent.com/MrFums/ValbotAssets/main/fumspfp.png")
+                embed.set_footer(text=textforfooter, icon_url="https://raw.githubusercontent.com/The-Drobe/ValbotAssets/main/fumspfp.png")
                 embed.set_timestamp()
-                embed.set_thumbnail(url='https://raw.githubusercontent.com/MrFums/ValbotAssets/main/valbotlogo_22plus_curved.png')
+                embed.set_thumbnail(url='https://raw.githubusercontent.com/The-Drobe/ValbotAssets/main/valbotlogo_22plus_curved.png')
                 webhook.add_embed(embed)
                 webhook.execute()
             except Exception:
@@ -873,25 +876,25 @@ class bot:
         cheatercontinue1 = pyautogui.locateOnScreen(self.continueterminated_png, grayscale=True, confidence=0.6)
 
 
-        weaponselect = [['680','200'],['680','360'],['680','520'],['680','680'],['900','200'],['900','360'],['900','520'],['900','680'],['1180','200'],['1180','360'],['1180','520'],['1180','680']]
-        # stinger, spectre, bucky, judge, bulldog, guardian, phantom, vandal, marshal, operator, ares, odin
-        #each list entity contains the 1920x1080 res pixel coordinates to a gun in the buy menu. Goes from top to bottom of column then moves to next row
-        randomweapon = random.choice(weaponselect)
+        # weaponselect = [['680','200'],['680','360'],['680','520'],['680','680'],['900','200'],['900','360'],['900','520'],['900','680'],['1180','200'],['1180','360'],['1180','520'],['1180','680']]
+        # # stinger, spectre, bucky, judge, bulldog, guardian, phantom, vandal, marshal, operator, ares, odin
+        # #each list entity contains the 1920x1080 res pixel coordinates to a gun in the buy menu. Goes from top to bottom of column then moves to next row
+        # randomweapon = random.choice(weaponselect)
 
-        pyautogui.keyDown(self.buymenubutton)
-        time.sleep(randint(6, 9) / 10)
-        pyautogui.keyUp(self.buymenubutton)
-        time.sleep(randint(5, 8) / 10)
-        pyautogui.moveTo(randomweapon)
-        time.sleep(randint(5, 8) / 10)
-        pyautogui.moveTo(randomweapon)
-        time.sleep(randint(5, 8) / 10)
-        pyautogui.click()
-        time.sleep(randint(6, 9) / 100)
-        pyautogui.keyDown(self.buymenubutton)
-        time.sleep(randint(6, 9) / 10)
-        pyautogui.keyUp(self.buymenubutton)
-        time.sleep(randint(6, 9) / 10)
+        # pyautogui.keyDown(self.buymenubutton)
+        # time.sleep(randint(6, 9) / 10)
+        # pyautogui.keyUp(self.buymenubutton)
+        # time.sleep(randint(5, 8) / 10)
+        # pyautogui.moveTo(randomweapon)
+        # time.sleep(randint(5, 8) / 10)
+        # pyautogui.moveTo(randomweapon)
+        # time.sleep(randint(5, 8) / 10)
+        # pyautogui.click()
+        # time.sleep(randint(6, 9) / 100)
+        # pyautogui.keyDown(self.buymenubutton)
+        # time.sleep(randint(6, 9) / 10)
+        # pyautogui.keyUp(self.buymenubutton)
+        # time.sleep(randint(6, 9) / 10)
         
 
         while a <= n:
@@ -910,11 +913,11 @@ class bot:
 
                         embed.set_author(
                             name=self.version,
-                            url="https://github.com/MrFums/Valbot",
-                            icon_url="https://raw.githubusercontent.com/MrFums/ValbotAssets/main/valbotlogo_22plusnobg.png",
+                            url="https://github.com/The-Drobe/Valbot",
+                            icon_url="https://raw.githubusercontent.com/The-Drobe/ValbotAssets/main/valbotlogo_22plusnobg.png",
                         )
                         textforfooter = "[" + self.computer_name + "] by Fums"
-                        embed.set_footer(text=textforfooter, icon_url="https://raw.githubusercontent.com/MrFums/ValbotAssets/main/fumspfp.png")
+                        embed.set_footer(text=textforfooter, icon_url="https://raw.githubusercontent.com/The-Drobe/ValbotAssets/main/fumspfp.png")
                         embed.set_timestamp()
                         webhook.add_embed(embed)
                         webhook.execute()
@@ -1095,14 +1098,14 @@ class bot:
                         embed = DiscordEmbed(title='Valbot Summary', description='Valbot has completed a match loop!', color=34343)
                         embed.set_author(
                             name=self.version,
-                            url="https://github.com/MrFums/Valbot",
-                            icon_url="https://raw.githubusercontent.com/MrFums/ValbotAssets/main/valbotlogo_22plusnobg.png",
+                            url="https://github.com/The-Drobe/Valbot",
+                            icon_url="https://raw.githubusercontent.com/The-Drobe/ValbotAssets/main/valbotlogo_22plusnobg.png",
                         )
                         textforfooter = "[" + self.computer_name + "] by Fums"
-                        embed.set_footer(text=textforfooter, icon_url="https://raw.githubusercontent.com/MrFums/ValbotAssets/main/fumspfp.png")
+                        embed.set_footer(text=textforfooter, icon_url="https://raw.githubusercontent.com/The-Drobe/ValbotAssets/main/fumspfp.png")
                         embed.set_timestamp()
                         embed.set_thumbnail(
-                            url='https://raw.githubusercontent.com/MrFums/ValbotAssets/main/valbotlogo_22plus_curved.png')
+                            url='https://raw.githubusercontent.com/The-Drobe/ValbotAssets/main/valbotlogo_22plus_curved.png')
 
                         embed.add_embed_field(name="XP Earned", value=self.xpamount, inline=False)
                         embed.add_embed_field(name="Games Played", value=self.gamesplayed, inline=False)
@@ -1203,5 +1206,29 @@ class bot:
                 time.sleep(5)
                 self.playbutton()
 
-bot = bot()
-bot.firststart()
+#bot = bot()
+#bot.firststart()
+#3aa12cb016ae4dd8b7bfa9befe281704
+#592a0701246f4de688fcad1578359aea
+#a5cf473583d4423e90b7ec6d4785e2cd
+#c437acc4ac7d4a8490f591145db28c79
+#1fb947f837ef48b38e394ff5a5be3b50
+#51f7ac6fb0a84fc287e66cfef2e80e74
+#76d2a16aa66446749819a5b2d88ed2f7
+#28523d44db2844eebc7363e3a9c937db
+#b0c9290a30eb41c6aad97287db45a622
+#d0b42728a6134bb9baa4ab0a04ad3666
+#768ae6049c404ba79b6db3c392690ba8
+#d403060bfa29483aa23cffd805e4733a
+#c090e2d60a0345c5a05a7d8d0bef495e
+#9662f64ca2154e1b9953a8910dd2bdbd
+#c9463b4f3637417fac2ba4837d16a551
+#c2847397c0d04eafb28de717ef4f2b9e
+#26c44adbcce34f98bb6ad16dcdf25126
+#cb221ca5629c42eeae0bf5500c60d16e
+#ce0c8df6085e48e7b9d5377847b966de
+#87d77529e8364d91b60c8d43afedfbd8
+#07226ba53435419e984043c12a34eb7f
+#36e82352405f411887c891e461571c04
+#26d14bfd63af4ce2bf6d19acecfd5c69
+#4b3b1ff262e24668be834372a77b8136
