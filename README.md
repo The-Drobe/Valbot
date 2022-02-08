@@ -77,7 +77,7 @@ Run through the installer as normal, then download the Valbot files.
 
 [Download here](https://github.com/The-Drobe/Valbot/releases/latest)
 
-Click on the zip file that says `Valbot-X.X.X` and unzip to where you would like the bot to be stored. Be advised to not put this in an Admin only folder as the bot must write the folder it is in to manage the `config.ini` file it creates.
+Click on the zip file that says `Source code (zip)` and unzip to where you would like the bot to be stored. Be advised to not put this in an Admin only folder as the bot must write the folder it is in to manage the `config.ini` file it creates.
 
 
 ## Instructions
