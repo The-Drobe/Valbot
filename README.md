@@ -13,9 +13,15 @@ Fair use is a use permitted by copyright statute that might otherwise be infring
 
 Non-profit, educational or personal use tips the balance in favor of fair use. 
 
+## Disclamer
+I and the other devlopers are not responsible for bricked devices,
+dead SD cards, data loss, thermonuclear war, or economic crisis caused by
+Valbot. YOU are choosing to use this application, and if you
+point your finger at me for messing up your device or account, I will laugh at you.
+
 ## Important Notice:
 
-Valbot is now DEPRECATED. Riot seems to have added, and are constantly improving, their AFK bot detection vectors. Valbot will not receive support or updates for the foreseeable future. Running the program is now considered unsafe and I do NOT recommend it. Some changes will also need to be made to the bot to accomodate the introdouction of the new game launcher; around line 270.
+I am yet to update the old anti afk detection system so use at your own risk
 
 ## Discord Server:
 [Fums Community Server](https://discord.gg/RDgbSsKTS5)
