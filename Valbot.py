@@ -59,7 +59,7 @@ def main():
     
     
 
-    version = "Valbot v2.2.3"
+    version = "Valbot v2.2.4"
     versionstripped = version.replace("Valbot ", "")
     print(Style.RESET_ALL) 
     os.system('mode con: cols=39 lines=33')
