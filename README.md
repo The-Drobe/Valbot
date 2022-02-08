@@ -14,7 +14,7 @@ Fair use is a use permitted by copyright statute that might otherwise be infring
 Non-profit, educational or personal use tips the balance in favor of fair use. 
 
 ## Disclamer
-I and the other devlopers are not responsible for bricked devices,
+I and the other developers are not responsible for bricked devices,
 dead SD cards, data loss, thermonuclear war, or economic crisis caused by
 Valbot. YOU are choosing to use this application, and if you
 point your finger at me for messing up your device or account, I will laugh at you.
@@ -43,7 +43,7 @@ I am yet to update the old anti afk detection system so use at your own risk
 
 ## Requirements
 
-Only works on 1920 x 1080 resolution. If you wish to make the bot work with a different resolution other than 1920 x 1080, you need to get your own version of the images for the bot to recognize. Read on how to do this [here](https://github.com/MrFums/Valbot/blob/master/information/change_resolution.txt).
+Only works on 1920 x 1080 resolution. If you wish to make the bot work with a different resolution other than 1920 x 1080, you need to get your own version of the images for the bot to recognize. Read on how to do this [here](https://github.com/The-Drobe/Valbot/blob/master/information/change_resolution.txt).
 
 Run the batch file as Administator to install the dependencies. 
 Seems to only work on 64bit Windows 10 with Python 3.9 
@@ -52,7 +52,7 @@ For the program to function properly, please copy and paste your OWN Valorant sh
 
 You also need a functioning brain, please have one of these; it's very important.
 
-You should also read the [saftey precautions](https://github.com/MrFums/Valbot/blob/master/information/safetyprecautions.txt) to keep your account safe while running Valbot.
+You should also read the [saftey precautions](https://github.com/The-Drobe/Valbot/blob/master/information/safetyprecautions.txt) to keep your account safe while running Valbot.
 
 ### Windows installation
 
@@ -75,7 +75,7 @@ Run through the installer as normal, then download the Valbot files.
 
 ## Download
 
-[Download here](https://github.com/MrFums/Valbot/releases/latest)
+[Download here](https://github.com/The-Drobe/Valbot/releases/latest)
 
 Click on the zip file that says `Valbot-X.X.X` and unzip to where you would like the bot to be stored. Be advised to not put this in an Admin only folder as the bot must write the folder it is in to manage the `config.ini` file it creates.
 
@@ -94,7 +94,7 @@ Click on the zip file that says `Valbot-X.X.X` and unzip to where you would like
 
 6- Follow the instructions that will appear on screen if you haven't already.
 
-7- If you encounter issues please [create one](https://github.com/MrFums/ValBot/issues/new) or if you have suggestions please create a [pull request](https://github.com/MrFums/ValBot/compare)
+7- If you encounter issues please [create one](https://github.com/The-Drobe/ValBot/issues/new) or if you have suggestions please create a [pull request](https://github.comThe-Drobe/ValBot/compare)
 
 8- (Optional) Setup a Discord webhook to get updates to your discord server for when the bot has completed a game.
 
