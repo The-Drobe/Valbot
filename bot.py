@@ -271,7 +271,11 @@ class bot:
         time.sleep(15)
         self.restarted += 1
         #clicks the play button when you are in launcher to fix some peoples launchers
-        pyautogui.click(self.playlauncher)
+        self.a = pyautogui.locateOnScreen(self.playlauncher)
+        if self.a is not None:
+            x, y = pyautogui.center(self.a)
+            pyautogui.click(x, y)
+        #pyautogui.click(self.playlauncher)
         time.sleep(15)
         self.valorantrunning()
 
